@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function ProductCard({ product }) {
   return (
-    <Link href={`/products/${product.id}`}>
+    <Link href={`/product/${product.id}`}>
       <li>
         <div className={styles["product-card"]}>
           <img src={product.thumbnail} alt={product.title} />
