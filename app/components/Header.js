@@ -7,7 +7,7 @@ export default function Header() {
 
     <div className={`${styles.wrapper} container`}>
    <aside>
-    <Link href ="/">Logo</Link>
+    <Link href ="/">DopBrain</Link>
    </aside>
 
    <aside>
@@ -15,7 +15,7 @@ export default function Header() {
         <ul className={styles['nav-list']}>
             <li className={styles['nav-item']}><Link href="/">Home</Link></li>
             <li className={styles['nav-item']}><Link href="/products">Products</Link></li>
-            <li className={styles['nav-item']}><Link href="/cart">Cart</Link></li>
+            <li className={styles['nav-item']}><Link href="/cart">Daily Activities</Link></li>
         </ul>
     </nav>
    </aside>
