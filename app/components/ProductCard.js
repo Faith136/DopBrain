@@ -8,11 +8,12 @@ export default function ProductCard({ product }) {
     <Link href={`/product/${product.id}`}>
       <li>
         <div className={styles["product-card"]}>
-          <img src={product.thumbnail} alt={product.title} />
+          <img src={product.image} alt={product.title} />
           <div className={styles.info}>
             <h3>{product.title}</h3>
             <p>{product.description}</p>
-            <span>${product.price}</span>
+            <p>{product.activities.join(", ")}</p>
+            <button>Open</button>
           </div>
         </div>
       </li>

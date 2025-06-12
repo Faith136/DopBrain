@@ -4,8 +4,8 @@ import Link from 'next/link';
 import ProductCard from '../components/ProductCard';
 
 export default async function Products() {
-  const data = await fetch('https://dummyjson.com/products?limit=12&sortBy=title&order=desc')
-    const products = await data.json()
+  const data = await fetch('http://localhost:3000/api/products', { cache: 'no-store' });
+  const products = await data.json();
   return (
     <div className={styles.products}>
       <div className={styles.wrapper}>

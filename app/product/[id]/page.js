@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './product.module.css'
+import styles from './paduct.module.css'
 import Image from 'next/image'
-
+          
 
 export default async function page({ params }) {
   const { id } = await params
@@ -13,7 +13,7 @@ export default async function page({ params }) {
   return (
     <div className={`${styles["product-page"]} container`}>
       <section className={styles.photo}>
-        <Image src={product.image[0]} alt={product.title} layout="responsive" width={344} height={34} />
+        <Image src={product.thumbnail} alt={product.title} width={344} height={344} />
       </section>
       <section className={styles.info}>
         <h1>{product.title}</h1>
@@ -26,4 +26,4 @@ export default async function page({ params }) {
     </div>
   )
 }
-   
+
