@@ -1,0 +1,113 @@
+/* NEW - for the wrapper */
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(206, 232, 247);
+}
+
+/* MODIFIED - now only 75% width */
+.container {
+  display: flex;
+  width: 75%;
+  height: 90vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* styles/Login.module.css
+
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+} */
+
+.leftPane {
+  flex: 1;
+  background-color:hsl(214, 82.40%, 80.00%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  padding: 2rem;
+  text-align: center;
+}
+
+.image {
+  max-width: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.rightPane {
+  flex: 1;
+  padding: 4rem 3rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  font-family: cursive;
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form a {
+  text-align: right;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.form button {
+  padding: 0.75rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: #aaa;
+}
+
+.google {
+  background-color:rgb(66, 244, 78);
+  color: #444;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.signup {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+

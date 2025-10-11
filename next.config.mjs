@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import config from "./config.js";
 
-export default nextConfig;
+const nextConfig = {
+    env: {
+        MONGODB_URI: config.MONGODB_URI,
+        DB_PASSWORD: config.DB_password,
+        NEXTAUTH_SECRET: config.NEXTAUTH_SECRET
+    }
+};
+
+export default nextConfig; 

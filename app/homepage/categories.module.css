@@ -1,5 +1,5 @@
 .categories {
-    padding: 60px;
+    padding: 20px;
     text-align: center;
 
     .wrapper {
@@ -38,3 +38,10 @@
 
 
 }
+.buttony {
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--dark-color);
+        border-radius: 100px;}

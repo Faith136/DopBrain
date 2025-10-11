@@ -1,4 +1,117 @@
-.products {
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--muted-foreground);
+  font-weight: 400;
+}
+
+.activitiesGrid {
+  display: grid;
+  /* Improved responsive grid with better breakpoints */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.viewMoreContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.viewMoreButton {
+  padding: 1rem 3rem;
+  border: 2px solid var(--border);
+  border-radius: 9999px;
+  background: var(--pink-color);
+  color: var(--foreground);
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewMoreButton:hover {
+  border-color: var(--primary);
+  background: oklch(from var(--primary) l c h / 0.1);
+  transform: translateY(-2px);
+}
+
+/* Enhanced responsive breakpoints for better mobile and tablet experience */
+@media (max-width: 1024px) {
+  .container {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .activitiesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .activitiesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .viewMoreButton {
+    padding: 0.875rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .viewMoreButton {
+    padding: 0.75rem 2rem;
+    font-size: 0.9375rem;
+  }
+}
+
+
+/*.products {
     margin-bottom: 60px;
     
     .wrapper {
@@ -25,3 +138,12 @@
         }
     }
 }
+
+.activitiesGrid {
+  display: grid;
+  /* Improved responsive grid with better breakpoints */
+ /* grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+*/

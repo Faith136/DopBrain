@@ -4,7 +4,7 @@ export default function Footer() {
   return (
    <footer>
         <div className={styles['app-footer']}>
-            © {new Date().getFullYear()} Your Company Name. All rights reserved.            
+            © {new Date().getFullYear()} || faithodongo9@gmail.com || All rights reserved.            
         </div>
    </footer> 
       );
