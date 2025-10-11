@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { MoodDialog } from './Moodass';
 import { useState } from 'react'; 
 
-export default function Hero() {
+export default function Hero({ onCategoryChange }) {
   const [dialogOpen, setDialogOpen] = useState(false)
 
   const handleMoodSelect = (category) => {
