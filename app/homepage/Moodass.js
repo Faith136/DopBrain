@@ -25,14 +25,14 @@ const moods = [
     label: "Bored & Restless",
     icon: <Zap className="w-6 h-6" />,
     description: "Need excitement",
-    recommendedCategory: "main-course",
+    recommendedCategory: "digestive",
   },
   {
     id: "motivated",
     label: "Motivated & Energized",
     icon: <Coffee className="w-6 h-6" />,
     description: "Ready for action",
-    recommendedCategory: "main-course",
+    recommendedCategory: "mains",
   },
   {
     id: "sad",
@@ -58,8 +58,8 @@ export function MoodDialog({ open, onOpenChange, onMoodSelect }) {
 
   if (!open) return null
 
-  const handleMoodClick = (mood) => {
-    setSelectedMood(mood)
+  const handleMoodClick = (moods) => {
+    setSelectedMood(moods)
     setStep("recommend")
   }
 
