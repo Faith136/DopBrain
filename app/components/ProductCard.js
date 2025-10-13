@@ -11,8 +11,9 @@ export default function ProductCard({ product }) {
     hard: "oklch(0.65 0.12 280)",
   }
   return (
-    <Link href={`/product/${product.id}`}> 
-     {/* <li>
+      <Link href="#">
+    {/* <Link href={`/product/${product.id}`}> 
+     <li>
         <div className={styles["product-card"]}>
           <img src={product.image} alt={product.title} />
           <div className={styles.info}>
