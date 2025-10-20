@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react'; // Import signIn from next-auth
+import Image from 'next/image';
 
 export default function LoginPage() {
 const[email, setEmail]= useState("");
@@ -40,7 +41,7 @@ const[email, setEmail]= useState("");
     <div className={`${styles.wrapper} container`}>
       <div className={styles.container}>
         <div className={styles.leftPane}>
-          <img src="/Hbrain.gif" alt="Happy brain" className={styles.image} />
+          <Image src="/Hbrain.gif" alt="Happy brain" className={styles.image} width="400" height="400" />
           <h2>A happy brain a happy life</h2>
           <p>Boost your focus by maintaining the levels of dopamine in your brain!</p>
         </div>

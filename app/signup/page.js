@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import Image from "next/image";
 
 export default function SignupPage() {
   const[username, setUsername]= useState("");
@@ -17,7 +18,7 @@ const router = useRouter();
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3000/api/register', {
+      const response = await fetch('/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,7 +33,7 @@ const router = useRouter();
         toast.success(data.message);
         setTimeout(() => {
           router.push('/login');
-        }, 1000);
+        }, 100);
         setLoading(false);
       }
     } catch (err) {
@@ -46,7 +47,7 @@ const router = useRouter();
     <div className={`${styles.wrapper} container`}>
       <div className={styles.container}>
         <div className={styles.leftPane}>
-          <img src="/Hbrain.gif" alt="Happy brain" className={styles.image} />
+          <Image src="/Hbrain.gif" alt="Happy brain" className={styles.image} width="400" height="400" />
           <h2>A happy brain a happy life</h2>
           <p>Boost your focus by maintaining the levels of dopamine in your brain!</p>
         </div>
@@ -56,7 +57,7 @@ const router = useRouter();
             <h3>Welcome to DopBrain</h3>
             <form onSubmit={handleSubmit} className={styles.form}>
               <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}  placeholder="username" />
-              <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
               <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
               <a href="#">Forgot password?</a>
               <button type="submit"  disabled={loading|| !username || !email || !password}>
