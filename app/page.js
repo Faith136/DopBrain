@@ -8,6 +8,12 @@ import Products from './homepage/Products';
 import { StatsBar } from './components/Stats-bar';
 import Testimonials from './components/Testimonials';
 
+export const metadata = {
+  title: "Activities to help Increase Dopamine",
+  description: "Simple daily Habits to Increase Dopamine and feel happier and lighter",
+  metadataBase: new URL("https://dop-brain-75ao.vercel.app/")
+};
+
 export default function Page() {
   const [selectedCategory, setSelectedCategory] = useState("appetizers")
   const handleCategoryChange = (category) => {
