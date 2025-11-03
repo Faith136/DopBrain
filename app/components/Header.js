@@ -19,11 +19,7 @@ export default function Header() {
     <nav>
         <ul className={styles['nav-list']}>
   <li className={styles['nav-item']}><Link href="/">Home</Link></li>
-<<<<<<< HEAD
   <li className={styles['nav-item']}><Link href="/">Daily Streaks</Link></li>
-=======
-  <li className={styles['nav-item']}><Link href="/cart">Daily Streaks</Link></li>
->>>>>>> a63c2e163944608f16a858a1c25d7e30ecca5ec7
   <li className={styles['nav-item']}>
   {status === "authenticated" ? (
     <button
