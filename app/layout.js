@@ -17,15 +17,24 @@ const raleway = Raleway({
   subsets: ["latin"],
 });
 
+<<<<<<< HEAD
 {/* export const metadata = {
   title: "Activities to help Increase Dopamine",
   description: "Simple daily Habits to Increase Dopamine and feel happier and lighter",
   metadataBase: new URL("https://dop-brain-75ao.vercel.app/")
 }; */}
+=======
+/*export const metadata = {
+  title: "Activities to help Increase Dopamine",
+  description: "Simple daily Habits to Increase Dopamine and feel happier and lighter",
+  metadataBase: new URL("https://dop-brain-75ao.vercel.app/")
+};*/
+>>>>>>> a63c2e163944608f16a858a1c25d7e30ecca5ec7
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
      <Head>
        <title>DopBrain</title> 
      <meta name="description" content="Simple daily Habits to Increase Dopamine and feel happier and lighter" /> 
@@ -36,6 +45,18 @@ export default function RootLayout({ children }) {
      <meta property="og:url" content="https://dop-brain-75ao.vercel.app" /> 
      <meta property="og:type" content="website" /> 
      </Head>
+=======
+      <Head>
+        <title>Activities to Increase Dopamine</title>
+        <meta name="description" content="Simple daily Habits to Increase Dopamine and feel happier and lighter" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Activities to help Increase Dopamine" />
+        <meta property="og:description" content="Simple daily Habits to Increase Dopamine and feel happier and lighter" />
+        <meta property="og:url" content="https://dop-brain-75ao.vercel.app/" />
+        <meta property="og:type" content="website" />
+      </Head>
+>>>>>>> a63c2e163944608f16a858a1c25d7e30ecca5ec7
       <SessionProvider>
       <body className={`${openSans.variable} ${raleway.variable}`}>
         <Header />

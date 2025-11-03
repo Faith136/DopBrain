@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+<<<<<<< HEAD
     "postbuild": "next-sitemap",
+=======
+>>>>>>> a63c2e163944608f16a858a1c25d7e30ecca5ec7
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,7 +20,10 @@
     "mongoose-unique-validator": "^4.0.1",
     "next": "15.3.3",
     "next-auth": "^4.24.11",
+<<<<<<< HEAD
     "next-sitemap": "^4.2.3",
+=======
+>>>>>>> a63c2e163944608f16a858a1c25d7e30ecca5ec7
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2"
