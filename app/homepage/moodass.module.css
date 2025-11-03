@@ -1,0 +1,254 @@
+/* Custom modal overlay and pink box structure */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalBox {
+  background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+  border-radius: 24px;
+  padding: 3px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 20px 60px rgba(255, 20, 147, 0.4);
+}
+
+.modalContent {
+  background: #0a0e27;
+  border-radius: 21px;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background: rgba(255, 20, 147, 0.3);
+  transform: rotate(90deg);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header svg {
+  color: #ff1493;
+  margin: 0 auto 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.moodGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.moodCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 20, 147, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.moodCard:hover {
+  border-color: #ff1493;
+  background: rgba(255, 20, 147, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 20, 147, 0.3);
+}
+
+.moodIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff1493, #ff69b4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.moodLabel {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.moodDescription {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.recommendationCard {
+  background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(255, 105, 180, 0.1));
+  border: 2px solid #ff1493;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.recommendationIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff1493, #ff69b4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 24px rgba(255, 20, 147, 0.4);
+}
+
+.recommendationTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.recommendationText {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.backButton {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.startButton {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #ff1493, #ff69b4);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(255, 20, 147, 0.4);
+}
+
+.startButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(255, 20, 147, 0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .moodGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .modalContent {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .recommendationTitle {
+    font-size: 1.25rem;
+  }
+}

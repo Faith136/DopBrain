@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api
+Disallow: /admin
+Disallow: /drafts
+
+# Host
+Host: https://dop-brain-75ao.vercel.app
+
+# Sitemaps
+Sitemap: https://dop-brain-75ao.vercel.app/sitemap.xml
